@@ -1,28 +1,39 @@
+// =======================================
+//              DEPENDENCIES
+// =======================================
+require('dotenv').config()
 const express = require('express');
 const methodOverride = require('method-override')
 const mongoose = require('mongoose');
+const productsController = require('./controllers/products_controller');
+
 const app = express();
 const port = 3000;
-const pokemonController = require('./controllers/pokemon_controller');
+const mongoURI = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.DB_NAME}`
 
-// Middlewares
+mongoose.set('useFindAndModify', false)
+mongoose.set('useCreateIndex', true)
+
+// set the view engine that express will use
+app.set('view engine', 'ejs')
+
+// setting middleware to accept json and urlencoded request body
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// setting middleware to accept spoofed methods based on _method query parameter
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
 
-// Set view engine
-app.set('view engine', 'ejs');
-
 
 // index route
-app.get('/products', pokemonController.index);
+app.get('/products', productsController.index);
 
 
 // Initialise MongoDB connection via Mongoose
 mongoose.set('useCreateIndex', true);
 mongoose.connect(
-    'mongodb://localhost:27017/poke_express?readPreference=primary&appname=MongoDB%20Compass&ssl=false',
+    mongoURI,
     {useNewUrlParser: true, useUnifiedTopology: true}
 );
 
