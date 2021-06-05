@@ -36,24 +36,24 @@
 }
 
 .footer {
-    position: absolute;
     bottom: 0;
     width: 100%;
     height: 80px;
     background-color: #FBE0CF;
     color: white;
-    text-align: center;
-    margin: 0
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
 #footer-logo{
-    position: absolute;
     bottom: 15px;
     margin-left: 55px
 }
 
+
 .footer-text-group{
-    position: absolute;
     bottom: 15px;
     right: 0;
     text-align: right;
@@ -67,7 +67,6 @@
     font-family: 'Poppins', sans-serif;
     color: #F0626E;
     font-weight: 300;
-    margin-right: 15px;
 }
 
 .body-container{
@@ -75,6 +74,7 @@
     z-index: -1;
     height: 100vh;
     position: relative;
+    margin-top: 78px;
 }
 
 .blop{
@@ -85,7 +85,7 @@
 h2{
     font-family: 'Poppins', sans-serif;
     color: #F0626E;
-    font-weight: 700;
+    font-weight: 600;
     text-align: center;
     padding-top: 50px;
 }
@@ -93,3 +93,75 @@ h2{
 #smile-wellness{
     text-align: center;
 }
+
+.card-description{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-weight: 600;
+}
+
+.card{
+    background-color: transparent;
+    border: none;
+}
+
+.card-body{
+    padding: 20px 0;
+}
+
+.card-title{
+    margin-top: 10px;
+}
+
+.btn{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 5px;
+    background-color: #F0626E;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.2));
+}
+
+#price-red{
+    color: #F0626E;
+}
+
+.card-container{
+    margin: 50px 100px;
+}
+
+.contact-container{
+    background:url(../assets/contact-bg.png);
+    height: 250px;
+    background-size: cover;
+}
+
+#contact-text{
+    font-family: 'Poppins', sans-serif;
+    color: #F0626E;
+    font-weight: 600;
+    text-align: right;
+    padding-right: 100px;
+    margin-top: 20px;
+}
+
+.contact-group{
+    align-items: center;
+    height: 250px;
+}
+
+.container-fluid{
+    margin: 0;
+}
+
+.button-contact {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 5px;
+    background-color: #F0626E;
+    border: none;
+    padding: 15px 100px;
+    border-radius: 30px;
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.2));
+}
+    
