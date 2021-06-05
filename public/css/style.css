@@ -1,0 +1,95 @@
+.nav-text{
+    font-family: 'Poppins', sans-serif;
+    color: #525252;
+}
+
+.container-fluid{
+    margin: 5px 50px;
+}
+
+.navbar{
+    background-color: white;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+}
+
+.navbar-nav{
+    margin-left: 20px;
+}
+
+.logout{
+    border: 1px solid #525252;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 30px;
+    font-size: 16px;
+    padding: 10px 55px;
+}
+
+#welcome-text{
+    margin-top: 20px;
+    margin-right: 15px;
+    font-weight: 700;
+    color: #F0626E;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #FBE0CF;
+    color: white;
+    text-align: center;
+    margin: 0
+  }
+
+#footer-logo{
+    position: absolute;
+    bottom: 15px;
+    margin-left: 55px
+}
+
+.footer-text-group{
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    text-align: right;
+    margin-right: 55px;
+  
+}
+
+#footer-text{
+    text-decoration: none;
+    display: inline;
+    font-family: 'Poppins', sans-serif;
+    color: #F0626E;
+    font-weight: 300;
+    margin-right: 15px;
+}
+
+.body-container{
+    background-color: #FFF6F0;
+    z-index: -1;
+    height: 100vh;
+    position: relative;
+}
+
+.blop{
+    position: absolute;
+    bottom: 50%;
+}
+
+h2{
+    font-family: 'Poppins', sans-serif;
+    color: #F0626E;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#smile-wellness{
+    text-align: center;
+}
