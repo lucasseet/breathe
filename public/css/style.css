@@ -3,13 +3,13 @@
     color: #525252;
 }
 
-.container-fluid{
-    margin: 5px 50px;
-}
-
 .navbar{
     background-color: white;
     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+}
+
+#space{
+    margin:0 55px;
 }
 
 .navbar-nav{
@@ -36,12 +36,11 @@
 }
 
 .footer {
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 80px;
     background-color: #FBE0CF;
-    color: white;
-    margin: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -57,7 +56,7 @@
     bottom: 15px;
     right: 0;
     text-align: right;
-    margin-right: 55px;
+    margin: 55px;
   
 }
 
@@ -72,7 +71,6 @@
 .body-container{
     background-color: #FFF6F0;
     z-index: -1;
-    height: 100vh;
     position: relative;
     margin-top: 78px;
 }
@@ -163,5 +161,9 @@ h2{
     padding: 15px 100px;
     border-radius: 30px;
     filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.2));
+}
+
+.card-space{
+    margin-bottom: 135px;
 }
     

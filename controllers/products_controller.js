@@ -4,9 +4,16 @@ const _ = require('lodash')
 module.exports = {
 
     index: (req, res) => {
-        res.render('../views/products/index');
-            
+        ProductModel.find()
+            .then(response => {
+                res.render('../views/products/index', { products: response });
+            })
+            .catch(err => {
+                console.log(err)
+                res.send("db error")
+            })
     },
+            
 
 
 }
