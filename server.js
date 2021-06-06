@@ -38,6 +38,10 @@ app.get('/register', productsController.registerPage);
 // focus route
 app.get('/focus', productsController.focusPage);
 
+//meditation route
+app.get('/meditation', productsController.meditationPage);
+
+
 // Initialise MongoDB connection via Mongoose
 mongoose.set('useCreateIndex', true);
 mongoose.connect(

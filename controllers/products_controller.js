@@ -24,6 +24,10 @@ module.exports = {
 
     show: (req, res) => {
         res.render('../views/products/show')
+    },
+    
+    meditationPage: (req, res) => {
+        res.render('../views/products/meditation')
     }
             
 
