@@ -1,3 +1,5 @@
+/* product listing page */
+
 .nav-text{
     font-family: 'Poppins', sans-serif;
     color: #525252;
@@ -36,7 +38,7 @@
 }
 
 .footer {
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     width: 100%;
     height: 80px;
@@ -80,7 +82,7 @@
     bottom: 50%;
 }
 
-h2{
+.font{
     font-family: 'Poppins', sans-serif;
     color: #F0626E;
     font-weight: 600;
@@ -96,6 +98,7 @@ h2{
     font-family: 'Poppins', sans-serif;
     color: black;
     font-weight: 600;
+    text-align: left;
 }
 
 .card{
@@ -133,6 +136,7 @@ h2{
     background:url(../assets/contact-bg.png);
     height: 250px;
     background-size: cover;
+    background-position: center;
 }
 
 #contact-text{
@@ -166,4 +170,141 @@ h2{
 .card-space{
     margin-bottom: 135px;
 }
+
+
+/* Register page */
+
+.yoga-image{
+    background-image: url(/assets/yoga1.png);
+    background-color: #FBE0CF;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100vh;
+}
+
+#register-welcome{
+    text-align: left;
+    padding-top: 30px;
+}
+
+#register-body{
+    color: #B9B8C0;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.register-container{
+ width: 80%;
+ height: auto;
+}
+
+.register-btn{
+    margin-top: 25px;
+    padding: 15px 15%
+}
+
+#register-logo{
+    margin-left: 55px;
+    margin-top: 20px;
+}
+
+.register-signup{
+    list-style-type: none;
+    justify-content: flex-end;
+    margin-right: 55px;
+    margin-top: 20px;
     
+}
+
+/* Focus page */
+
+.card-background{
+ background-color: #FFF1E8;
+ padding: 25px 25px;
+ height: 500px;
+ border-radius: 35px;
+ position: relative;
+ margin-right: 30px;
+ margin-bottom: 30px
+}
+
+#white-bg{
+    background-color: white;
+}
+
+.add-task-title{
+    font-size: 45px;
+    text-align: left;
+    padding-left: 100px
+}
+
+.add-task-btn{
+    content: url(/assets/add-task.png);
+    height: 80px;
+    width: 83px;
+    text-align: center;
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.2));
+}
+
+.add-task-text{
+    padding-top: 5px;
+    font-size: 20px;
+}
+
+.add-task-group{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.todo-card-container{
+    margin-top: 15px
+}
+
+.edit-btn{
+    content: url(/assets/edit.png);
+    height: 60px;
+    width: 63px;
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.2));
+    margin-top: 10px;
+}
+
+.done-btn{
+    content: url(/assets/tick.png);
+    height: 60px;
+    width: 63px;
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.2));
+}
+
+.at-description{
+    margin: 5px
+}
+
+.at-description-group{
+    position: absolute;
+    top: 260px;
+}
+
+.at-task{
+    font-size: 45px;
+    color: #F0626E;
+    font-weight: 600;
+    margin: 0;
+}
+
+.at-form-container{
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.font-form{
+    font-family: 'Poppins', sans-serif;
+    color: #525252;
+    font-weight: 600;
+    text-align: left;
+    padding-top: 2px;
+}

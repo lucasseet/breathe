@@ -13,6 +13,14 @@ module.exports = {
                 res.send("db error")
             })
     },
+
+    registerPage: (req, res) => {
+        res.render('../views/users/register')
+    },
+
+    focusPage: (req, res) => {
+        res.render('../views/products/focus')
+    }
             
 
 

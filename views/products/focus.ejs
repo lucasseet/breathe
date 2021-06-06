@@ -1,0 +1,113 @@
+<%- include('../partials/head') %>
+
+<div id="white-bg" class="body-container">
+    
+    <!-- Title & Add task button -->
+    <div id="todo-title-container">
+        <div class="row">
+            <h2 class="col-8 font add-task-title">Work Smarter, <br> Not Harder — Todos.</h2>
+            <div class="col-4 add-task-group">
+                <a href="/" class="add-task-btn"></a>
+                <p class="font add-task-text">Add Task</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- card -->
+    <div class="card-container todo-card-container">
+        <div class="card-group row">
+            <div class="col-4 card-space card-background">
+                <div class="card" >
+                    <div class="card-body" style="height: 125px;">
+                        <h5 class="card-title at-task">Organise files on my computer</h5>
+                            <div class= at-description-group>
+                                <h5 id="price-red"class="card-title at-description">Posted by:<span style="font-weight:normal"> Lucas Seet</span></h5>
+                                <h5 id="price-red"class="card-title at-description">Mood:<span style="font-weight:normal"> Happy</span></h5>
+                                <h5 id="price-red"class="card-title at-description">Added on:<span style="font-weight:normal"> Sat May 21</span></h5>
+                                <h5 id="price-red"class="card-title at-description">Time:<span style="font-weight:normal"> 14:38</span></h5>
+                                <a href="/" class="edit-btn"></a>
+                                <a href="/" class="done-btn"></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-4 card-space card-background">
+                <div class="card" >
+                    <div class="card-body" style="height: 125px;">
+                        <h5 class="card-title at-task">Organise files on my computer</h5>
+                            <div class= at-description-group>
+                                <h5 id="price-red"class="card-title at-description">Posted by:<span style="font-weight:normal"> Lucas Seet</span></h5>
+                                <h5 id="price-red"class="card-title at-description">Mood:<span style="font-weight:normal"> Happy</span></h5>
+                                <h5 id="price-red"class="card-title at-description">Added on:<span style="font-weight:normal"> Sat May 21</span></h5>
+                                <h5 id="price-red"class="card-title at-description">Time:<span style="font-weight:normal"> 14:38</span></h5>
+                                <a href="/" class="edit-btn"></a>
+                                <a href="/" class="done-btn"></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-4 card-space card-background">
+                <div class="card" >
+                    <div class="card-body" style="height: 125px;">
+                        <h5 class="card-title at-task">Organise files on my computer</h5>
+                            <div class= at-description-group>
+                                <h5 id="price-red"class="card-title at-description">Posted by:<span style="font-weight:normal"> Lucas Seet</span></h5>
+                                <h5 id="price-red"class="card-title at-description">Mood:<span style="font-weight:normal"> Happy</span></h5>
+                                <h5 id="price-red"class="card-title at-description">Added on:<span style="font-weight:normal"> Sat May 21</span></h5>
+                                <h5 id="price-red"class="card-title at-description">Time:<span style="font-weight:normal"> 14:38</span></h5>
+                                <a href="/" class="edit-btn"></a>
+                                <a href="/" class="done-btn"></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+
+    <!-- Add-task-form -->
+
+    <div class="at-form-container">
+        <form method="POST" action="/">
+            <div class="mb-3 font-form">
+                <label for="first_name" class="form-label">Task</label>
+                <input type="text" class="form-control" id="task" name="task">
+            </div>
+            
+            <div class="mb-3 font-form">
+                <label for="last_name" class="form-label"> Name</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            
+            <div class="mb-3 font-form ">
+                <label for="last_name" class="form-label"> How are you feeling today?</label>
+                <input type="text" class="form-control" id="mood" name="mood">
+            </div>
+        
+            <button type="submit" class="btn btn-primary register-btn">Add Task</button>
+        </form>
+    </div>
+
+
+    <!-- Contact section -->
+    <div class="contact-container container-fluid">
+        <div class="row contact-group">
+            <div class="col-7">
+            <h3 id="contact-text">Relaxation made simple, Reach Us!</h3>
+            </div>
+            <div class="col-5">
+            <a href="/" class=" button-contact btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<%- include('../partials/foot') %>

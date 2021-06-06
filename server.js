@@ -29,6 +29,11 @@ app.use(express.static('public'))
 // index route
 app.get('/products', productsController.index);
 
+// register route
+app.get('/register', productsController.registerPage);
+
+// focus route
+app.get('/focus', productsController.focusPage);
 
 // Initialise MongoDB connection via Mongoose
 mongoose.set('useCreateIndex', true);
