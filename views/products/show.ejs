@@ -1,0 +1,103 @@
+<%- include('../partials/head') %>
+
+<div class="body-container">    
+
+    <div id="smile-wellness">
+    <h2 class="font">Our Wellness Shop</h2>
+    <img src="/assets/smile.png"alt="smile" width="125" height="35">
+    </div>
+
+    <!-- Product Info -->
+    <div class="product-container">
+        <div class="row">
+            <div class="col-6 product-image">
+                <img src="/images/eyemask.png"width="400" height="400">
+            </div>
+
+            <div class="col-6">
+                <h3 class="product-title">Mer-Sea & Co. Avant Garden Eye Mask</h3>
+                <h4 class="product-description">Crafted with an elegant outer glass casing, this diffuser uses ultrasonic technology to disperse your favorite essential oils into dreamy wafts inspired by clouds and the sky. Integrated LED lighting enhances the ambiance, while a sleek, minimalist design elevates any space.</h4>
+                <h4 class="product-price">$72.22</h4>
+                <a href="/" class=" button-contact btn btn-primary buy-now">Buy Now</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Comments Section -->
+    <div class="comments-container">
+        
+        <!-- header & add review btn -->
+        <div class="comments-title-group row">
+            <div class="col-8">
+                <h3 class="comments-title-head" >What people are saying?</h3>
+            </div>
+            <div class="comments-title col-4 review-group">
+                <a href="/" class=" button-contact btn btn-primary review-btn">Add Review</a>
+            </div>
+        </div>
+
+        <!-- card-comments -->
+        <div class="row">
+            <div class="card-group comment-group">
+                <div class="col-4 card-space comments-card-background">
+                    <div class="card" >
+                        <div class="card-body" style="height: 125px;">
+                            <img class="speech" src="/assets/rating.png" style="height: 40px">
+                            <h5 class="card-title comments-title">I came to learn that the storyline in my head... was holding me back</h5>
+                                <div class= "comments-description-group">
+                                    <h5 class="card-title comments-description">Lucas Seet</h5>
+                                    <h5 class="card-title comments-description"><span style="font-weight:normal">14:38</h5>
+                                </div>
+                        </div>
+                    </div>
+            
+                </div>    
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Add-task-form -->
+
+    <div class="at-form-container">
+        <form method="POST" action="/">
+            <div class="mb-3 font-form">
+                <label for="first_name" class="form-label">Comments</label>
+                <input type="text" class="form-control" id="comments" name="comments">
+            </div>
+
+            <div class="mb-3 font-form">
+                <label for="last_name" class="form-label"> Name</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            
+            <div class="mb-3 font-form">
+                <label for="last_name" class="form-label"> Rating</label>
+                <input type="text" class="form-control" id="rating" name="rating">
+            </div>
+        
+            <button type="submit" class="btn btn-primary review-btn">Add Review</button>
+        </form>
+    </div>
+
+
+
+    <!-- Contact section -->
+    <div class="contact-container container-fluid">
+        <div class="row contact-group">
+            <div class="col-7">
+            <h3 id="contact-text">Relaxation made simple, Reach Us!</h3>
+            </div>
+            <div class="col-5">
+            <a href="/" class=" button-contact btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+<%- include('../partials/foot') %>

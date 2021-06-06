@@ -29,6 +29,9 @@ app.use(express.static('public'))
 // index route
 app.get('/products', productsController.index);
 
+// show route
+app.get('/products/show', productsController.show);
+
 // register route
 app.get('/register', productsController.registerPage);
 

@@ -20,6 +20,10 @@ module.exports = {
 
     focusPage: (req, res) => {
         res.render('../views/products/focus')
+    },
+
+    show: (req, res) => {
+        res.render('../views/products/show')
     }
             
 

@@ -204,7 +204,7 @@
 
 .register-btn{
     margin-top: 25px;
-    padding: 15px 15%
+    padding: 30px 15%
 }
 
 #register-logo{
@@ -280,7 +280,8 @@
 }
 
 .at-description{
-    margin: 5px
+    margin: 5px;
+    font-size: 15px;
 }
 
 .at-description-group{
@@ -289,7 +290,7 @@
 }
 
 .at-task{
-    font-size: 45px;
+    font-size: 30px;
     color: #F0626E;
     font-weight: 600;
     margin: 0;
@@ -307,4 +308,115 @@
     font-weight: 600;
     text-align: left;
     padding-top: 2px;
+}
+
+/* Product page */
+
+.product-container{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 120px;
+}
+
+.product-title{
+    font-family: 'Poppins', sans-serif;
+    color: #525252;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.product-description{
+    font-family: 'Poppins', sans-serif;
+    color: #525252;
+    font-weight: 300;
+    font-size: 15px;
+    margin-bottom: 20px;
+    line-height: 1.3em;
+
+}
+
+.product-price{
+    font-family: 'Poppins', sans-serif;
+    color: #F0626E;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 15px;
+
+}
+
+.product-image{
+    text-align: right;
+    padding-right: 70px;
+}
+
+.buy-now{
+    padding: 15px 40%;
+}
+
+.comments-card-background{
+    background-color: #FFF;
+    padding: 25px 25px;
+    height: 250px;
+    border-radius: 20px;
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+   }
+
+.speech{
+    transform: rotateY(180deg);
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.comments-container{
+    margin-bottom: 50px;
+    margin-top: 200px;
+}
+
+.comments-description{
+    margin: 0;
+    font-size: 15px;
+    color: #525252;
+
+}
+
+.comments-description-group{
+    position: absolute;
+    top: 155px;
+}
+
+.comments-title{
+    font-family: 'Poppins', sans-serif;
+    color: #525252;
+    font-size: 20;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.comments-title-group{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.review-group{
+    text-align:right;
+    margin-bottom: 20px;
+}
+
+.review-btn{
+    padding: 15px 35px;
+}
+
+.comments-title-head{
+    font-family: 'Poppins', sans-serif;
+    color: #F0626E;
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.comment-group{
+    margin-bottom: 35px;
 }
