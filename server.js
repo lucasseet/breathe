@@ -5,7 +5,8 @@ require('dotenv').config()
 const express = require('express');
 const methodOverride = require('method-override')
 const mongoose = require('mongoose');
-const productsController = require('./controllers/products_controller');
+const productRouter = require('./routers/product_router')
+
 
 const app = express();
 const port = 3000;
@@ -26,20 +27,11 @@ app.use(methodOverride('_method'))
 app.use(express.static('public'))
 
 
-// index route
-app.get('/products', productsController.index);
+// =======================================
+//              ROUTES
+// =======================================
+app.use('/', productRouter)
 
-// show route
-app.get('/products/show', productsController.show);
-
-// register route
-app.get('/register', productsController.registerPage);
-
-// focus route
-app.get('/focus', productsController.focusPage);
-
-//meditation route
-app.get('/meditation', productsController.meditationPage);
 
 
 // Initialise MongoDB connection via Mongoose

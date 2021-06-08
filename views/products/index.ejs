@@ -1,42 +1,73 @@
 <%- include('../partials/head') %>
 
-<div class="body-container">
-    <!-- <img src="/assets/blop1.png" alt="blop1" width="500" height="500"> -->
-    
-    <div id="smile-wellness">
-    <h2 class="font">Our Wellness Shop</h2>
-    <img src="/assets/smile.png"alt="smile" width="125" height="35">
-    </div>
+<div id="white-bg" class="body-container">
 
-    <!-- card -->
-    <div class="card-container">
-        <div class="card-group row">
-            <% products.forEach(element => { %>
-                <div class="col-4 card-space">
-                    <div class="card" >
-                        <img src="<%= element.image %>" class="card-img-top" alt="..." >
-                        <div class="card-body" style="height: 125px;">
-                        <h5 class="card-title card-description"><%= element.name %></h5>
-                        <h5 id="price-red"class="card-title card-description">S$<%= element.price %></h5>
-                        <a href="/" class="btn btn-primary">Shop Now</a>
-                        </div>
+<!-- Mood/Task Section -->
+<div class="night-bg">
+    <div class="mood-container">
+        <h1 class="medi-title">How are you feeling today?</h1>
+        <img class="expression" src="/assets/expression.png"  height="100">
+
+        <form method="POST" action="/focus">  
+            <div class="row">
+               
+                    <div class="font-form col-6 align-items-center d-flex">
+                        <input type="text" class="form-control" placeholder="List down 1 important task for the day…" name="todo">
                     </div>
+              
+
+                
+                    <div class="font-form align-items-center col-3 d-flex">
+                        <select class="form-select" id="mood" name="mood">
+                        <option selected>I am feeling...</option>
+                        <option value="Happy">Happy</option>
+                        <option value="Sad">Sad</option>
+                        <option value="Angry">Angry</option>
+                        <option value="Love">Love</option>
+                        <option value="Motivated">Motivated</option>
+                        </select>
+                    </div>
+               
+
+                <div class="col-3">
+                    <button type="submit" class="btn btn-primary pin-btn">Pin It!</button>
                 </div>
-            <% }) %>    
-        </div>
+            </div>
+        </form>  
     </div>
 
-    <!-- Contact section -->
-    <div class="contact-container container-fluid">
-        <div class="row contact-group">
-            <div class="col-7">
-            <h3 id="contact-text">Relaxation made simple, Reach Us!</h3>
-            </div>
-            <div class="col-5">
-            <a href="/" class=" button-contact btn btn-primary">Contact Us</a>
-            </div>
+</div>
+
+
+<!-- Meditation Section -->
+<div class="meditation-container">
+    <h2 class="header-text">Meditation</h2>
+
+    <div class="row">
+        <div class="video-container col-6">
+            <p class="medi-des">Inspiring stories and mini-meditations <br> delivered daily to help you start your morning right.</p>
+            <iframe id="video-frame" width="600" height="315" src="https://www.youtube.com/embed/itZMM5gCboo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="meditation-image col-6"></div>
+
+    </div>
+
+</div>
+
+
+
+<!-- Contact section -->
+<div class="contact-container container-fluid">
+    <div class="row contact-group">
+        <div class="col-7">
+        <h3 id="contact-text">Relaxation made simple, Reach Us!</h3>
+        </div>
+        <div class="col-5">
+        <a href="/" class=" button-contact btn btn-primary">Contact Us</a>
         </div>
     </div>
+</div>
 
 </div>
 

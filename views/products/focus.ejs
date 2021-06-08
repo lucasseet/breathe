@@ -16,9 +16,9 @@
 
     <!-- card -->
     <div class="card-container todo-card-container">
-        <div class="card-group row">
-            <div class="col-4 card-space card-background">
-                <div class="card" >
+        <div class="card-group row g-3">
+            <div class="col-4">
+                <div class="card card-background" >
                     <div class="card-body" style="height: 125px;">
                         <h5 class="card-title at-task">Organise files on my computer</h5>
                             <div class= at-description-group>
@@ -34,8 +34,8 @@
             </div>
 
 
-            <div class="col-4 card-space card-background">
-                <div class="card" >
+            <div class="col-4">
+                <div class="card card-background" >
                     <div class="card-body" style="height: 125px;">
                         <h5 class="card-title at-task">Organise files on my computer</h5>
                             <div class= at-description-group>
@@ -51,8 +51,8 @@
             </div>
 
 
-            <div class="col-4 card-space card-background">
-                <div class="card" >
+            <div class="col-4">
+                <div class="card card-background" >
                     <div class="card-body" style="height: 125px;">
                         <h5 class="card-title at-task">Organise files on my computer</h5>
                             <div class= at-description-group>
@@ -65,6 +65,27 @@
                             </div>
                     </div>
                 </div>
+            </div>
+
+
+            <% task.forEach(element => { %>
+                <div class="col-4">
+                    <div class="card card-background" >
+                        <div class="card-body" style="height: 125px;">
+                            <h5 class="card-title at-task"><%= element.todo %></h5>
+                                <div class= at-description-group>
+                                    <h5 id="price-red"class="card-title at-description">Posted by:<span style="font-weight:normal"> <%= element.name %></span></h5>
+                                    <h5 id="price-red"class="card-title at-description">Mood:<span style="font-weight:normal"> <%= element.mood %></span></h5>
+                                    <h5 id="price-red"class="card-title at-description">Added on:<span style="font-weight:normal"> <%= element.date %></span></h5>
+                                    <h5 id="price-red"class="card-title at-description">Time:<span style="font-weight:normal"> <%= element.timestamp %></span></h5>
+                                    <a href="/" class="edit-btn"></a>
+                                    <a href="/" class="done-btn"></a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>   
+
             </div>
 
             
@@ -75,9 +96,9 @@
     <!-- Add-task-form -->
 
     <div class="at-form-container">
-        <form method="POST" action="/">
+        <form method="POST" action="/focus">
             <div class="mb-3 font-form">
-                <label for="first_name" class="form-label">Task</label>
+                <label for="first_name" class="form-label">Add To Do</label>
                 <input type="text" class="form-control" id="task" name="task">
             </div>
             
@@ -86,9 +107,16 @@
                 <input type="text" class="form-control" id="name" name="name">
             </div>
             
-            <div class="mb-3 font-form ">
-                <label for="last_name" class="form-label"> How are you feeling today?</label>
-                <input type="text" class="form-control" id="mood" name="mood">
+            <div class="mb-3 font-form">
+                <label for="last_name" class="form-label"> Mood</label>
+                <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                <option selected>I am feeling...</option>
+                        <option value="Happy">Happy</option>
+                        <option value="Sad">Sad</option>
+                        <option value="Angry">Angry</option>
+                        <option value="Love">Love</option>
+                        <option value="Motivated">Motivated</option>
+                </select>
             </div>
         
             <button type="submit" class="btn btn-primary register-btn">Add Task</button>

@@ -1,0 +1,43 @@
+<%- include('../partials/head') %>
+
+<div class="body-container">
+    <!-- <img src="/assets/blop1.png" alt="blop1" width="500" height="500"> -->
+    
+    <div id="smile-wellness">
+    <h2 class="font">Our Wellness Shop</h2>
+    <img src="/assets/smile.png"alt="smile" width="125" height="35">
+    </div>
+
+    <!-- card -->
+    <div class="card-container">
+        <div class="card-group row">
+            <% products.forEach(element => { %>
+                <div class="col-4 card-space">
+                    <div class="card" >
+                        <img src="<%= element.image %>" class="card-img-top" alt="..." >
+                        <div class="card-body" style="height: 125px;">
+                        <h5 class="card-title card-description"><%= element.name %></h5>
+                        <h5 id="price-red"class="card-title card-description">S$<%= element.price %></h5>
+                        <a href="/" class="btn btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>    
+        </div>
+    </div>
+
+    <!-- Contact section -->
+    <div class="contact-container container-fluid">
+        <div class="row contact-group">
+            <div class="col-7">
+            <h3 id="contact-text">Relaxation made simple, Reach Us!</h3>
+            </div>
+            <div class="col-5">
+            <a href="/" class=" button-contact btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<%- include('../partials/foot') %>
