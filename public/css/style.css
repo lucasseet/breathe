@@ -240,6 +240,12 @@
     padding-left: 111px
 }
 
+.edit-title{
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
 .add-task-btn{
     content: url(/assets/add-task.png);
     height: 80px;
@@ -251,6 +257,20 @@
 .add-task-text{
     padding-top: 5px;
     font-size: 20px;
+}
+
+.transparent-btn {
+    margin-top: 5px;
+    background-color: transparent;
+    border-radius: none;
+}
+
+.delete-inline{
+    display: inline;
+}
+
+button{
+    border-style: none;
 }
 
 .add-task-group{
@@ -284,7 +304,11 @@
 
 .at-description-group{
     position: absolute;
-    top: 200px;
+    top: 220px;
+}
+
+.hc-card{
+    top: 245px;
 }
 
 .at-task{
@@ -335,10 +359,9 @@
 }
 
 .product-price{
-    font-family: 'Poppins', sans-serif;
     color: #F0626E;
     font-size: 32px;
-    font-weight: 600;
+    border-style: none;
     margin-bottom: 15px;
 
 }
