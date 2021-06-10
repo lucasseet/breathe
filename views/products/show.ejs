@@ -11,14 +11,20 @@
     <div class="product-container">
         <div class="row">
             <div class="col-6 product-image">
-                <img src="/images/eyemask.png"width="400" height="400">
+                <img src="<%= products.image %>"width="400" height="400">
             </div>
 
             <div class="col-6">
-                <h3 class="product-title">Mer-Sea & Co. Avant Garden Eye Mask</h3>
+                <h3 class="product-title"><%= products.name %></h3>
                 <h4 class="product-description">Crafted with an elegant outer glass casing, this diffuser uses ultrasonic technology to disperse your favorite essential oils into dreamy wafts inspired by clouds and the sky. Integrated LED lighting enhances the ambiance, while a sleek, minimalist design elevates any space.</h4>
-                <h4 class="product-price">$72.22</h4>
-                <a href="/" class=" button-contact btn btn-primary buy-now">Buy Now</a>
+                <h4 class="product-price">$ <%= products.price %></h4>
+                <a href="" class=" button-contact btn btn-primary buy-now">Buy Now</a>
+                <div class="row shop-row">
+                    <a href="/products/<%= products.slug %>/edit" class=" col-6  button-contact btn btn-primary edit-now">Edit</a>
+                    <form method="post" action="/products/<%= products.slug %>?_method=DELETE">
+                        <button type="submit" class=" col-6 btn btn-danger edit-now">delete</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

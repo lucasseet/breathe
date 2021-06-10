@@ -1,6 +1,8 @@
 const _ = require('lodash')
 const { ProductModel } = require('../models/products');
-const { FocusToDoModel } = require('../models/focus_todos')
+const { FocusToDoModel } = require('../models/focus_todos');
+// const { ProductRatingModel } = require('../models/product_rating');
+
 
 module.exports = {
 
@@ -116,7 +118,6 @@ module.exports = {
 
     indexProductPage: (req, res) => {
 
-
         ProductModel.find()
             .then(response => {
                 res.render('products/products', { products: response })
@@ -127,18 +128,100 @@ module.exports = {
             })
     },
 
+    newCreateForm: (req, res) => {
+        res.render('products/new');
+    },
+
     showProductListing: (req, res) => {
 
-        ProductModel.findOne({ _id: req.params.id })
+        let product = {}
+
+        ProductModel.findOne({ slug: req.params.slug })
+            .then(item => {
+                // if item is not found, redirect to homepage
+                if (!item) {
+                    res.redirect('/')
+                    return
+                }
+                
+                product = item
+
+            })
             .then(response => {
-                res.render('products/show', { products: response });
+                res.render('products/show', {
+                    products: product
+                })
             })
             .catch(err => {
                 console.log(err)
-                res.send("db error")
+                res.redirect('/')
+            })
+
+
+    },
+
+    createProducts: async (req, res) => {
+
+        let slug = _.kebabCase(req.body.name)
+        ProductModel.create({
+            name: req.body.name,
+            price: req.body.price,
+            image: req.body.image,
+            slug: slug
+        })
+            .then(createResp => {
+                res.redirect('/products')
+            })
+            .catch(err => {
+                console.log(err)
+                res.redirect('/')
             })
     },
 
+    editProductPage: (req, res) => {
+        ProductModel.findOne({ slug: req.params.slug })
+            .then(item => {
+                res.render('products/edit_product', {
+                    product: item,
+                })
+            })
+            .catch(err => {
+                res.redirect('/')
+            })
+    },
+
+    updateProductPage: (req, res) => {
+        let newSlug = _.kebabCase(req.body.name)
+
+        ProductModel.updateOne(
+            { slug: req.params.slug },
+            {
+                $set: {
+                    name: req.body.name,
+                    price: req.body.price,
+                    image: req.body.image,
+                    slug: newSlug
+                }
+            }
+        )
+            .then(updateResp => {
+                res.redirect('/products/' + newSlug)
+            })
+            .catch(err => {
+                res.redirect('/products/' + req.params.slug + '/show')
+            })
+    },
+
+    deleteProduct: (req, res) => {
+        ProductModel.deleteOne( { slug: req.params.slug } )
+            .then(deleteResp => {
+                res.redirect('/products')
+            })
+            .catch(err => {
+                console.log(err)
+                res.redirect('/')
+            })
+    },
 
 
 

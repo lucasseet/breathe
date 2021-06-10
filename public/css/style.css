@@ -375,6 +375,18 @@ button{
     padding: 15px 40%;
 }
 
+.edit-now{
+    margin-top: 20px;
+    background-color: rgb(191, 191, 191);
+    
+}
+
+.shop-row{
+    flex-wrap: nowrap;
+    margin-right: 23px;
+    margin-left: -1px;
+}
+
 .comments-card-background{
     background-color: #FFF;
     padding: 25px 25px;

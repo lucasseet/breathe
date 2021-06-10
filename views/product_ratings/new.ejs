@@ -1,0 +1,53 @@
+<%- include('../partials/head') %>
+
+<div id="white-bg" class="body-container">
+    
+    <!-- Edit To Do -->
+    <div id="todo-title-container">
+        <div class="row">
+            <h2 class="font edit-title">Edit To-Do</h2>
+        </div>
+    </div>
+
+
+    <!-- Edit form -->
+    
+    <div class="at-form-container">
+        <form method="POST" action="/focus/<%= task._id %>?_method=PATCH">
+            <div class="mb-3 font-form">
+                <label for="first_name" class="form-label">To Do</label>
+                <input type="text" class="form-control" id="task" name="todo" value="<%= task.todo %>">
+            </div>
+            
+            <div class="mb-3 font-form">
+                <label for="last_name" class="form-label"> Mood</label>
+                <select class="form-select" name="mood" value="<%= task.mood %>">
+                    <option selected><%= task.mood %></option>
+                        <% ["Happy", "Sad", "Angry", "Love", "Motivated"].forEach(mood => { %> 
+                            <% if(task.mood !== mood){ %>
+                                <option value="<%= mood %>"><%= mood %></option>
+                            <% } %>
+                        <% }) %> 
+                </select>
+            </div>
+        
+            <button type="submit" class="btn btn-primary register-btn">Update To Do</button>
+        </form>
+    </div>
+
+
+    <!-- Contact section -->
+    <div class="contact-container container-fluid">
+        <div class="row contact-group">
+            <div class="col-7">
+            <h3 id="contact-text">Relaxation made simple, Reach Us!</h3>
+            </div>
+            <div class="col-5">
+            <a href="/" class=" button-contact btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<%- include('../partials/foot') %>
