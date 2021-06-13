@@ -23,6 +23,7 @@ module.exports = {
 
                 return ProductRatingModel.create({
                     product_id: productResp._id,
+                    name: req.body.name,
                     rating: rating,
                     comment: req.body.comment,
                     created_at: timestampNow,

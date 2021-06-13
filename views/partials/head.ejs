@@ -18,13 +18,13 @@
   </head>
   <body>
 
-    <nav class="navbar fixed-top navbar-expand-lg">
+    <nav class="navbar fixed-top navbar-expand-lg ">
       <div id="space" class="container-fluid">
         <a class="navbar-brand" href="/"><img src="/assets/breathe.png" alt="Breathe" width="120" height="48"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler navbar-btn " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-10 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active nav-text" aria-current="page" href="/">Home</a>
@@ -39,7 +39,7 @@
 
           <ul class="d-flex navbar-nav">
             <% if (user) { %>
-            <li class="nav-text" id="welcome-text">Welcome Lucas!</li>
+            <li class="nav-text" id="welcome-text">Welcome <%= user.first_name %>!</li>
             <form method="post" action="/users/logout">
             <li class="nav-item"><button type="submit" class="logout nav-text">Log out</button></li>
             </form>

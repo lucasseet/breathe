@@ -1,0 +1,45 @@
+<%- include('../partials/head') %>
+
+
+    <!-- Start of register -->
+
+    <div class="row">
+        <div class="col-6 yoga-image2">
+            <a class="navbar-brand" href="#">
+                <img id="register-logo" src="/assets/breathe.png" alt="Breathe" width="120" height="48">
+            </a>
+        </div>
+
+
+        <div class="col-6">
+
+            <ul class="d-flex register-signup">
+                <li class="nav-text" id="welcome-text">Already have an account?</li>
+                <li class="nav-item"><a class="nav-link nav-text"href="/products"><button type="button" class="logout nav-text">Sign Up</button></a></li>
+            </ul>
+
+            <div class="container register-container">
+                <h1 class="font" id="register-welcome">Contact Us</h1>
+                <h3 class="font" id="register-body">If you've a question about Breathe®, reach out to us!</h3>
+                <form method="POST" action="">
+
+                    <div class="mb-3 font-form">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                    </div>
+
+                    <div class="mb-3 font-form">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="mb-3 font-form">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                      </div>
+                    <button type="submit" class="btn btn-primary register-btn">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>    
+<%- include('../partials/foot') %>

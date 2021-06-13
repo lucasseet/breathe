@@ -64,5 +64,8 @@ router.delete('/products/:slug', productController.deleteProduct)
 // product rating routes
 router.post('/products/:slug', productRatingController.createRatings)
 
+// Contact routes
+router.get('/contact', productController.contactPage)
+
 
 module.exports = router;

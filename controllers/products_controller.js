@@ -8,7 +8,7 @@ const { UserModel } = require('../models/users');
 module.exports = {
 
     index: (req, res) => {
-        UserModel.find()
+        UserModel.findOne({ _id: req.params.id })
             .then(response => {
                 res.render('products/index', { user: response });
             })
@@ -221,6 +221,11 @@ module.exports = {
                 console.log(err)
                 res.redirect('/')
             })
+    },
+
+    contactPage: (req, res) => {
+                res.render('products/contact');
+            
     },
 
 

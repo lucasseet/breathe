@@ -31,7 +31,7 @@
 }
 
 #welcome-text{
-    margin-top: 20px;
+    margin-top: 11px;
     margin-right: 15px;
     font-weight: 700;
     color: #F0626E;
@@ -68,12 +68,13 @@
     font-family: 'Poppins', sans-serif;
     color: #F0626E;
     font-weight: 300;
+    margin-right: 15px;
 }
 
 .body-container{
     background-color: #FFF6F0;
     position: relative;
-    margin-top: 78px;
+    margin-top: 74px;
 }
 
 .blop{
@@ -181,6 +182,22 @@
     background-size: contain;
     background-position: center;
     height: 100vh;
+}
+
+.yoga-image2{
+    background-image: url(/assets/yoga3.png);
+    background-color: #FBE0CF;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100vh;
+}
+
+.navbar-toggler-icon{
+    content: url(/assets/menu.png);
+    height: 40px;
+    width: 40px;
+    border: none;
 }
 
 #register-welcome{
@@ -395,6 +412,7 @@ button{
     position: relative;
     width: 85%;
     margin: 0 auto;
+    margin-bottom: 20px;
    }
 
 .speech{
