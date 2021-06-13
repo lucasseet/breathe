@@ -38,9 +38,15 @@
           </ul>
 
           <ul class="d-flex navbar-nav">
+            <% if (user) { %>
             <li class="nav-text" id="welcome-text">Welcome Lucas!</li>
-
-            <li class="nav-item"><a class="nav-link nav-text"href="/products"><button type="button" class="logout nav-text">Log out</button></a></li>
+            <form method="post" action="/users/logout">
+            <li class="nav-item"><button type="submit" class="logout nav-text">Log out</button></li>
+            </form>
+            <% } else { %>
+              <li class="nav-item"><a class="nav-link nav-text"href="/users/register"><button type="button" class="logout nav-text">Register</button></a></li>
+              <li class="nav-item"><a class="nav-link nav-text"href="/users/login"><button type="button" class="logout nav-text">Login</button></a></li>
+            <% } %>
             
           </ul>
         </div>

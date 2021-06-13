@@ -1,26 +1,22 @@
 const _ = require('lodash')
 const { ProductModel } = require('../models/products');
 const { FocusToDoModel } = require('../models/focus_todos');
-// const { ProductRatingModel } = require('../models/product_rating');
+const { ProductRatingModel } = require('../models/product_rating');
+const { UserModel } = require('../models/users');
 
 
 module.exports = {
 
     index: (req, res) => {
-        ProductModel.find()
+        UserModel.find()
             .then(response => {
-                res.render('products/index');
+                res.render('products/index', { user: response });
             })
             .catch(err => {
                 console.log(err)
                 res.send("db error")
             })
     },
-
-    // newForm: (req, res) => {
-
-    //     res.render('products/edit')
-    // },
 
     showFocusPage: (req, res) => {
 
@@ -146,10 +142,14 @@ module.exports = {
                 
                 product = item
 
+                // get product ratings from DB
+                return ProductRatingModel.find({ product_id: item._id }).sort({ created_at: -1 });
+
             })
-            .then(response => {
+            .then(ratings => {
                 res.render('products/show', {
-                    products: product
+                    products: product,
+                    ratings: ratings
                 })
             })
             .catch(err => {

@@ -1,17 +1,12 @@
 const _ = require('lodash')
 const moment = require('moment')
 const {ProductModel} = require('../models/products')
-// const { ProductRatingModel } = require('../models/product_rating')
+const { ProductRatingModel } = require('../models/product_rating')
 
 module.exports = {
 
-    newForm: (req, res) => {
-        res.render('product-ratings/new', {
-            productSlug: req.params.slug
-        })
-    },
 
-    create: (req, res) => {
+    createRatings: (req, res) => {
         // validate rating is not empty
 
         let rating = Number(req.body.rating)
@@ -20,7 +15,7 @@ module.exports = {
         ProductModel.findOne({ slug: req.params.slug })
             .then(productResp => {
                 if (!productResp) {
-                    res.redirect('/products')
+                    res.redirect('/')
                     return
                 }
 
@@ -40,7 +35,7 @@ module.exports = {
             })
             .catch(err => {
                 console.log(err)
-                res.redirect('/products')
+                res.redirect('/')
             })
     }
 

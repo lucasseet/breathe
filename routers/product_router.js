@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const productController = require('../controllers/products_controller')
-// const productRatingController = require('../controllers/product_ratings_controller')
+const productRatingController = require('../controllers/product_ratings_controller')
 
 
 
@@ -60,6 +60,9 @@ router.patch('/products/:slug', productController.updateProductPage)
 
 // delete
 router.delete('/products/:slug', productController.deleteProduct)
+
+// product rating routes
+router.post('/products/:slug', productRatingController.createRatings)
 
 
 module.exports = router;

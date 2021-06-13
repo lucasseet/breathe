@@ -2,8 +2,9 @@ const mongoose = require('mongoose')
 
 const productRatingSchema = new mongoose.Schema({
   product_id: { type: String, required: true },
+  name: { type: String, required: true },
   rating: { type: Number, required: true, min: 1, max: 5 },
-  comment: { type: String },
+  comment: { type: String, required: true, },
   created_at: { type: Date },
   updated_at: { type: Date },
 })

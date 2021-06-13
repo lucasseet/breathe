@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="/css/style.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/smiley.png" type="image" sizes="16x16">
+
+    <title>Breathe</title>
+  </head>
+  <body>
+
+    <!-- Start of register -->
+
+    <div class="row">
+        <div class="col-6 yoga-image">
+            <a class="navbar-brand" href="#">
+                <img id="register-logo" src="/assets/breathe.png" alt="Breathe" width="120" height="48">
+                <h1 class="font" id="register-yoga-text">Everyday Mindfulness,<br> For Everybody</h1>
+            </a>
+        </div>
+
+
+        <div class="col-6">
+
+            <ul class="d-flex register-signup">
+                <li class="nav-text" id="welcome-text">Already have an account?</li>
+                <li class="nav-item"><a class="nav-link nav-text"href="/products"><button type="button" class="logout nav-text">Sign Up</button></a></li>
+            </ul>
+
+            <div class="container register-container">
+                <h1 class="font" id="register-welcome">Log In</h1>
+                <h3 class="font" id="register-body">Welcome Back!</h3>
+                <form method="POST" action="/users/login">
+                    <div class="mb-3 font-form">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="mb-3 font-form">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary register-btn">Login</button>
+                </form>
+
+            </div>
+        </div>
+    </div>    
+</body>

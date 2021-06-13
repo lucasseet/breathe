@@ -46,19 +46,22 @@
         <!-- card-comments -->
         <div class="row">
             <div class="card-group comment-group">
-                <div class="col-4 card-space comments-card-background">
-                    <div class="card" >
-                        <div class="card-body" style="height: 125px;">
-                            <img class="speech" src="/assets/rating.png" style="height: 40px">
-                            <h5 class="card-title comments-title">I came to learn that the storyline in my head... was holding me back</h5>
-                                <div class= "comments-description-group">
-                                    <h5 class="card-title comments-description">Lucas Seet</h5>
-                                    <h5 class="card-title comments-description"><span style="font-weight:normal">14:38</h5>
-                                </div>
+                <% ratings.forEach(element => { %>
+                    <div class="col-4 card-space comments-card-background">
+                        <div class="card" >
+                            <div class="card-body" style="height: 125px;">
+                                <img class="speech" src="/assets/rating.png" style="height: 40px">
+                                <h5 class="card-title comments-title"><%= element.comment %></h5>
+                                    <div class= "comments-description-group">
+                                        <h5 class="card-title comments-description">Name: <%= element.name %></h5>
+                                        <h5 class="card-title comments-description">Rating Score: <%= element.rating %></h5>
+                                        <h5 class="card-title comments-description"><span style="font-weight:normal">Rated At: <%= element.createdAt %></h5>
+                                    </div>
+                            </div>
                         </div>
+                
                     </div>
-            
-                </div>    
+                <% }) %>   
             </div>
         </div>
         
@@ -67,10 +70,10 @@
     <!-- Add-task-form -->
 
     <div class="at-form-container">
-        <form method="POST" action="/">
+        <form method="POST" action="/products/<%= products.slug %>">
             <div class="mb-3 font-form">
-                <label for="first_name" class="form-label">Comments</label>
-                <input type="text" class="form-control" id="comments" name="comments">
+                <label for="comment" class="form-label">Comment</label>
+          <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
             </div>
 
             <div class="mb-3 font-form">
@@ -79,15 +82,15 @@
             </div>
             
             <div class="mb-3 font-form">
-                <label for="last_name" class="form-label"> Mood</label>
-                <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                <option selected>I am feeling...</option>
-                <option value="1">Happy</option>
-                <option value="2">Sad</option>
-                <option value="3">Angry</option>
-                <option value="4">Love</option>
-                <option value="5">Motivated</option>
-                </select>
+                <label for="rating" class="form-label">Rating</label>
+            <select name="rating" id="rating" class="form-select">
+                <option value="" selected>Rate this product</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
             </div>
         
             <button type="submit" class="btn btn-primary review-btn">Add Review</button>
@@ -103,7 +106,7 @@
             <h3 id="contact-text">Relaxation made simple, Reach Us!</h3>
             </div>
             <div class="col-5">
-            <a href="/" class=" button-contact btn btn-primary">Contact Us</a>
+            <a href="" class=" button-contact btn btn-primary">Contact Us</a>
             </div>
         </div>
     </div>
