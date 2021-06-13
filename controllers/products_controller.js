@@ -8,14 +8,9 @@ const { UserModel } = require('../models/users');
 module.exports = {
 
     index: (req, res) => {
-        UserModel.findOne({ _id: req.params.id })
-            .then(response => {
-                res.render('products/index', { user: response });
-            })
-            .catch(err => {
-                console.log(err)
-                res.send("db error")
-            })
+        console.log(req.session)
+        res.render('products/index')
+
     },
 
     showFocusPage: (req, res) => {
@@ -113,7 +108,7 @@ module.exports = {
     },
 
     indexProductPage: (req, res) => {
-
+        console.log(req.session)
         ProductModel.find()
             .then(response => {
                 res.render('products/products', { products: response })

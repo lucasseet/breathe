@@ -30,7 +30,7 @@
               <a class="nav-link active nav-text" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active nav-text" aria-current="page" href="/products">Wellness Shop</a>
+              <a class="nav-link active nav-text" aria-current="page" href="/products">Products</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active nav-text" aria-current="page" href="/focus">Focus</a>
@@ -39,11 +39,13 @@
 
           <ul class="d-flex navbar-nav">
             <% if (user) { %>
+              <% console.log(user) %>
             <li class="nav-text" id="welcome-text">Welcome <%= user.first_name %>!</li>
             <form method="post" action="/users/logout">
             <li class="nav-item"><button type="submit" class="logout nav-text">Log out</button></li>
             </form>
             <% } else { %>
+              <% console.log(user) %>
               <li class="nav-item"><a class="nav-link nav-text"href="/users/register"><button type="button" class="logout nav-text">Register</button></a></li>
               <li class="nav-item"><a class="nav-link nav-text"href="/users/login"><button type="button" class="logout nav-text">Login</button></a></li>
             <% } %>

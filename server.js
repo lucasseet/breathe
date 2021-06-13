@@ -9,7 +9,7 @@ const session = require('express-session');
 const { setUserVarMiddleware } = require('./middlewares/auth-middleware')
 const productRouter = require('./routers/product_router')
 const userRouter = require('./routers/user_router')
-
+const appRouter = require('./routers')
 
 
 const app = express();
@@ -46,9 +46,9 @@ app.use(setUserVarMiddleware)
 // =======================================
 //              ROUTES
 // =======================================
-app.use('/', productRouter)
 
-app.use('/users', userRouter)
+
+app.use('/', appRouter)
 
 
 
