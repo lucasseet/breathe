@@ -38,8 +38,17 @@
     color: #F0626E;
 }
 
-a{
+a {
     color: #F0626E;
+    text-decoration-color: rgb(252, 172, 166);
+}
+
+.nav-item  a:hover {
+    color: #F0626E;
+}
+
+.btn-primary:hover {
+    background-color: rgb(252, 172, 166);
 }
 
 .footer {
