@@ -20,10 +20,12 @@
                 <h4 class="product-price">$ <%= products.price %></h4>
                 <a href="" class=" button-contact btn btn-primary buy-now">Buy Now</a>
                 <div class="row shop-row">
+                    <% if (user) { %>
                     <a href="/products/<%= products.slug %>/edit" class=" col-6  button-contact btn btn-primary edit-now">Edit</a>
                     <form method="post" action="/products/<%= products.slug %>?_method=DELETE">
                         <button type="submit" class=" col-6 btn btn-danger edit-now">delete</button>
                     </form>
+                    <% } %>
                 </div>
             </div>
         </div>
