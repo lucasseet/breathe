@@ -25,7 +25,7 @@
                                 <div class= "at-description-group">
                                     <h5 id="price-red"class="card-title at-description">Mood:<span style="font-weight:normal"> <%= element.mood %></span></h5>
                                     <h5 id="price-red"class="card-title at-description">Added on:<span style="font-weight:normal"> <%= element.createdAt %></span></h5>
-                                    <a href="/edit/<%= element._id %>" class="edit-btn"></a>
+                                    <a href="/focus/edit/<%= element._id %>" class="edit-btn"></a>
 
                                     <form class="delete-inline" method="post" action="/focus/<%= element._id %>?_method=DELETE">
                                         <button class="transparent-btn"><i class="done-btn"></i></button>

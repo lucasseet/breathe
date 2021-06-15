@@ -8,7 +8,6 @@ const { UserModel } = require('../models/users');
 module.exports = {
 
     index: (req, res) => {
-        console.log(req.session)
         res.render('products/index')
 
     },
@@ -108,7 +107,6 @@ module.exports = {
     },
 
     indexProductPage: (req, res) => {
-        console.log(req.session)
         ProductModel.find()
             .then(response => {
                 res.render('products/products', { products: response })
