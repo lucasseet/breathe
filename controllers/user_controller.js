@@ -17,9 +17,12 @@ module.exports = {
 
     },
 
-    loginForm: (req, res) => {
+    loginForm: async  (req, res) => {
+        const messages = await req.consumeFlash('error')
 
-        res.render('users/login')
+        res.render('users/login', {
+            messages: messages
+        })
 
     },
 
@@ -85,6 +88,24 @@ module.exports = {
         } catch(err) {
             console.log(err)
             res.redirect('/users/register')
+            return
+        }
+
+        // validate email here
+        if (!req.body.email) {
+            await req.flash('error', 'Email field must not be empty')
+
+            res.redirect('/users/login')
+
+            return
+        }
+
+        // validate password here
+        if (!req.body.password) {
+            await req.flash('error', 'Password field must not be empty')
+
+            res.redirect('/users/login')
+
             return
         }
 
