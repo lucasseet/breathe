@@ -1,8 +1,8 @@
 <h1>BREATHE</h1>
 Link to webpage: <a href="https://breathe-meditation.herokuapp.com/">Breathe</a>
 
-<h2>Application Description</h2><br>
-Stress levels rises from covid-19 pandemic, created this application to help reduce stress & improving the health of the people.
+<h2>Meditation/Mindfulness Application Description</h2><br>
+"One year after circuit breaker, people in S'pore socialising less, working more; mental well-being has declined causing a rise instress — from straitstimes". Created an app all about mindfulness/meditation & staying focus to help combat anxiety and reduce stress level.
 
 <h2>Application function:</h2><br>
 1. Meditation<br>
