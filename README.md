@@ -27,7 +27,9 @@ Stress levels rises from covid-19 pandemic, created this application to help red
 6. Linking application to heroku
 
 <h2>Initial wireframe & design</h2>
-<img src="public/assets/blop1.png">
+<img src="public/assets/wireframe1.png" width="500">
+<img src="public/assets/wireframe2.png" width="500">
+<img src="public/assets/wireframe3.png" width="500">
 
 <h2>Unsolved Problems</h2>
 1. Mobile responsive<br>
