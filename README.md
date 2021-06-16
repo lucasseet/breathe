@@ -20,11 +20,14 @@ Stress levels rises from covid-19 pandemic, created this application to help red
 
 <h2>The approach Taken</h2>
 1. Research<br>
-2. Wireframe / Design mock up<br>
+2. Wireframe / Design mock up & logo design<br>
 3. Started with HTML & CSS to workout the pages<br>
 4. Set up MVC structure, 7 RESTful routes &  FULL CRUD routes.<br>
 5. Set up database with collections in the MongoDB<br>
 6. Linking application to heroku
+
+<h2>Initial wireframe & design</h2>
+<img src="public/assets/blop1.png">
 
 <h2>Unsolved Problems</h2>
 1. Mobile responsive<br>

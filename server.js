@@ -6,6 +6,7 @@ const express = require('express');
 const methodOverride = require('method-override')
 const mongoose = require('mongoose');
 const session = require('express-session');
+const { flash } = require('express-flash-message');
 const { setUserVarMiddleware } = require('./middlewares/auth-middleware')
 const productRouter = require('./routers/product_router')
 const userRouter = require('./routers/user_router')
@@ -38,6 +39,8 @@ app.use(session({
     saveUninitialized: false,
     cookie: { path: '/', secure: false, maxAge: 3600000 } // 3600000ms = 3600s = 60mins, cookie expires in an hour
 }))
+
+app.use(flash({ sessionKeyName: 'flash_message' }))
 
 // setting middleware to ensure global template user variable
 app.use(setUserVarMiddleware)

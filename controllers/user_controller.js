@@ -6,9 +6,14 @@ const saltRounds = 10
 
 module.exports = {
 
-    registerForm: (req, res) => {
+    registerForm: async (req, res) => {
+        const messages = await req.consumeFlash('error')
 
-        res.render('users/register')
+        res.render('users/register', {
+            messages: messages
+        })
+
+        // res.render('users/register')
 
     },
 
@@ -21,12 +26,16 @@ module.exports = {
     registerUser: async (req, res) => {
         // validate first & last name
         if (!req.body.first_name || !req.body.last_name) {
+            await req.flash('error', 'Name field must not be empty')
+
             res.redirect('/users/register')
             return
         }
 
         // ensure password and confirm password matches
         if (req.body.password !== req.body.password_confirm) {
+            await req.flash('error', 'Password does not match')
+
             res.redirect('/users/register')
             return
         }
@@ -64,7 +73,7 @@ module.exports = {
             return
         }
         
-        res.redirect('/')
+        res.redirect('/users/login')
     },
 
     loginUser: async (req, res) => {

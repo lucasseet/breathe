@@ -38,6 +38,17 @@
             <div class="container register-container">
                 <h1 class="font" id="register-welcome">Welcome To Breathe!</h1>
                 <h3 class="font" id="register-body">Register your account</h3>
+
+                <% if (messages.length > 0) { %>
+                    <div class="alert alert-danger" role="alert">
+                      <ul>
+                        <% messages.forEach(msg => { %>
+                          <li><%= msg %></li>
+                        <% }) %>
+                      </ul>
+                    </div>
+                  <% } %>
+                  
                 <form method="POST" action="/users/register">
                     <div class="mb-3 font-form">
                     <label for="first_name" class="form-label">First Name</label>

@@ -117,8 +117,12 @@ module.exports = {
             })
     },
 
-    newCreateForm: (req, res) => {
-        res.render('products/new');
+    newCreateForm: async (req, res) => {
+        const messages = await req.consumeFlash('error')
+
+        res.render('products/new', {
+            messages: messages
+        })
     },
 
     showProductListing: (req, res) => {
@@ -154,6 +158,14 @@ module.exports = {
     },
 
     createProducts: async (req, res) => {
+         // validate input here
+         if (!req.body.name) {
+            await req.flash('error', 'Name, Price & Image field must not be empty')
+
+            res.redirect('/products/new')
+
+            return
+        }
 
         let slug = _.kebabCase(req.body.name)
         ProductModel.create({

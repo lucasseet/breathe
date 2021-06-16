@@ -10,9 +10,21 @@
     </div>
 
 
+
     <!-- Edit form -->
     
     <div class="at-form-container">
+
+        <% if (messages.length > 0) { %>
+            <div class="alert alert-danger" role="alert">
+              <ul>
+                <% messages.forEach(msg => { %>
+                  <li><%= msg %></li>
+                <% }) %>
+              </ul>
+            </div>
+          <% } %>
+          
         <form method="POST" action="/products">
             <div class="mb-3 font-form">
                 <label for="image" class="form-label">Image</label>
