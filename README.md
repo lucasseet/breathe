@@ -8,6 +8,35 @@ Link to webpage: <a href="https://breathe-meditation.herokuapp.com/">Breathe</a>
 1. Meditation<br>
 2. Stay focus (To-do list)<br>
 3. Wellness Shop<br>
+<br>
+
+<h2>Routes / Pages</h2>
+
+| **URL** | **HTTP Verb** |  **Action**|
+|------------|-------------|------------|
+| /         | GET       | index  
+| /products         | GET       | index   
+| /products/new         | GET       | new
+| /products/:slug         | GET       | show
+| /products        | POST       | create
+| /products/:slug/edit        | GET       | edit
+| /products/new/:slug         | PATCH       | update
+| /products/:slug         | DELETE       | destroy
+| /products/:slug         | POST       | create rating
+| /contact       | GET      | show contact page
+| /register       | GET      | show register form
+| /register       | POST      | register user
+| /login       | GET      | login form
+| /login       | POST      | login user
+| /logout       | POST      | destroy
+| /focus      | GET      | show focus page
+| /focus      | POST      | create to do from homepage
+| /focus      | POST      | create to do from focus page
+| /focus/edit/:id      | EDIT      | edit to do
+| /focus/:id     | UPDATE      | update to do
+| /focus/:id     | DELETE     | delete to do
+
+<br>
 
 <h2>Technologies used</h2>
 1. Express JS<br>
