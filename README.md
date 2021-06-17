@@ -24,11 +24,11 @@ Link to webpage: <a href="https://breathe-meditation.herokuapp.com/">Breathe</a>
 | /products/:slug         | DELETE       | destroy
 | /products/:slug         | POST       | create rating
 | /contact       | GET      | show contact page
-| /register       | GET      | show register form
-| /register       | POST      | register user
-| /login       | GET      | login form
-| /login       | POST      | login user
-| /logout       | POST      | destroy
+| /users/register       | GET      | show register form
+| /users/register       | POST      | register user
+| /users/login       | GET      | login form
+| /users/login       | POST      | login user
+| /users/logout       | POST      | destroy
 | /focus      | GET      | show focus page
 | /focus      | POST      | create to do from homepage
 | /focus      | POST      | create to do from focus page
