@@ -66,9 +66,9 @@ Dependecies:<br>
 6. Linking application to heroku
 
 <h2>Initial wireframe & design</h2>
-<img src="public/assets/wireframe1.png" width="500">
-<img src="public/assets/wireframe2.png" width="500">
-<img src="public/assets/wireframe3.png" width="500">
+<img src="public/assets/wireframe1.png" width="1000">
+<img src="public/assets/wireframe2.png" width="1000">
+<img src="public/assets/wireframe3.png" width="1000">
 
 <h2>Unsolved Problems</h2>
 1. Mobile responsive<br>
