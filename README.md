@@ -39,13 +39,23 @@ Link to webpage: <a href="https://breathe-meditation.herokuapp.com/">Breathe</a>
 <br>
 
 <h2>Technologies used</h2>
-1. Express JS<br>
-2. Mongoose<br>
-3. NodeJS (Dependencies such as: lodash, method-override, moment, bcrypt etc..) <br>
-4. HTML<br>
-5. CSS<br>
-6. MongoDB<br>
-7. MVC<br>
+
+Dependecies:<br>
+- Express JS<br>
+- Mongoose<br>
+- NodeJS<br>
+- HTML<br>
+- CSS<br>
+- MongoDB<br>
+- MVC<br>
+- Bcrpyt<br>
+- Dotenv<br>
+- Method override<br>
+- Moment<br>
+- Router<br>
+- Express-flash-message<br>
+- Express-session<br>
+
 
 <h2>The approach Taken</h2>
 1. Research<br>
